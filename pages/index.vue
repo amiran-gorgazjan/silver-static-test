@@ -1,29 +1,26 @@
 <template>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <nav>
-          <nuxt-link to="/blog">
-            My Blog
-          </nuxt-link>
-        </nav>
+  <div>
+    <h1 class="main-title">
+      Hello World 1
+    </h1>
+    <p>This is a simple example of a Vue.js component. <span class="my-message">{{ message }}</span></p>
+    <p>
+      <button class="btn btn-primary" @click="changeMessage">
+        Change Message
+      </button>
+    </p>
 
-        <h1 class="main-title">
-          Hello World 1
-        </h1>
-        <p>This is a simple example of a Vue.js component. <span class="my-message">{{ message }}</span></p>
-        <p>
-          <button class="btn btn-primary" @click="changeMessage">
-            Change Message
-          </button>
-        </p>
-      </div>
-    </div>
+    <Calculator />
   </div>
 </template>
 
 <script>
+import Calculator from '~/components/Calculator.vue'
+
 export default {
+  components: {
+    Calculator
+  },
   data () {
     return {
       message: 'Hello Vue!'
@@ -37,10 +34,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
-.container {
-  margin-top: 80px;
-}
+<style lang="scss" scoped>
 .my-message {
   color: red;
 }
