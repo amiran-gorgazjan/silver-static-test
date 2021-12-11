@@ -9,7 +9,7 @@
         </nav>
 
         <h1 class="main-title">
-          Hello World
+          Hello World 1
         </h1>
         <p>This is a simple example of a Vue.js component. <span class="my-message">{{ message }}</span></p>
         <p>
